@@ -1,13 +1,16 @@
 //- header
 header.header
-  .header__logotype
-    a(href="") 
-      img(src="", alt="")
-  .header__menu
-    ul
-      li
-        a(href="") Services
-      li
-        a(href="") Clients
-      li
-        a(href="") Our team
+  .container
+    .header__logotype
+      a.header__logotype-link(href="#") 
+        img.svg(src="static/images/general/logotype.svg", alt="Logotip")
+    nav
+      ul.menu__list
+        li.menu__list-item
+          a(href="#") Services
+        li.menu__list-item
+          a(href="#") Clients
+        li.menu__list-item
+          a(href="#") Our team
+        li.menu__list-item
+          a(href="#") Contact us

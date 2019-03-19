@@ -1,5 +1,8 @@
-@import "buttons/buttons";
 @import "footer/footer";
 @import "header/header";
-@import "navigation/navigation";
-@import "small-blocks/small-blocks";
+
+// main-page
+@import "../pages/main/about-us";
+@import "../pages/main/our-services";
+@import "../pages/main/our-client";
+@import "../pages/main/our-team";

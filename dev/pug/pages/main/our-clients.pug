@@ -1,7 +1,9 @@
 //our-clients
 section.ourClients
     .container
+        .ourClients__title
+            h3 Our clients
         ul.ourClients__list
-            each src in ['Link', 'Link', 'Link', 'Link']
+            each src in ['static/images/content/clients/logo-lightspeed.svg', 'static/images/content/clients/logo-trvl.svg', 'static/images/content/clients/logo-spider-strategies.svg', 'static/images/content/clients/logo-tripadvisor.svg', 'static/images/content/clients/logo-shutterfly.svg', 'static/images/content/clients/logo-decos.svg', 'static/images/content/clients/logo-tiqets.svg', 'static/images/content/clients/logo-hotelchamp.svg', 'static/images/content/clients/logo-flitsmeister.svg', 'static/images/content/clients/logo-sap.svg', 'static/images/content/clients/logo-redkix.svg', 'static/images/content/clients/logo-nos.svg']
                 li.ourClients__list-item
-                    img(src=src alt='Client')
+                    img.svg(src=src alt='Client')

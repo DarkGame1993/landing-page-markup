@@ -8,7 +8,13 @@ html {
   height: 100%;
 }
 
-body { height: 100%; }
+body { 
+  font-size: 10px;
+  font-size: 1.6rem;
+  height: 100%; 
+  font-family: 'Abel', sans-serif;
+  font-weight: normal;
+}
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
@@ -54,5 +60,15 @@ button { outline: none; }
   width: 100%;
 }
 
+.absolute-link{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+
+}
 //Модули
 @import "modules/modules";

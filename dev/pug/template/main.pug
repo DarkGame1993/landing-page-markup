@@ -12,7 +12,7 @@ html(lang="ru-RU")
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
 		//font-face
-
+		link(href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
 
 		<!--[if lt IE 9]>
@@ -20,7 +20,8 @@ html(lang="ru-RU")
 		<![endif]-->
 	body(class=pageClass)
 		.wrapper
-			include ../modules/header/header
+			.container
+				include ../modules/header/header
 			.content
 				block content
 			include ../modules/footer/footer

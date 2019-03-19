@@ -9,3 +9,40 @@
   ::-moz-placeholder          {@content}
   :-ms-input-placeholder      {@content}
 }
+
+// media query
+@mixin max-470 {
+  @media screen and (max-width: #{$mobile-size}) {
+    @content;
+  }
+}
+@mixin max-520 {
+  @media screen and (max-width: #{$large-mobile-size}) {
+    @content;
+  }
+}
+@mixin min-768 {
+  @media screen and (min-width: #{$tablet-size}) {
+    @content;
+  }
+}
+@mixin max-768 {
+  @media screen and (max-width: #{$tablet-size}) {
+    @content;
+  }
+}
+@mixin max-1024 {
+  @media screen and (max-width: #{$tablet-wide-size}) {
+    @content;
+  }
+}
+@mixin max-1198 {
+  @media screen and (max-width: #{$desktop-size}) {
+    @content;
+  }
+}
+@mixin min-1198 {
+  @media screen and (min-width: #{$desktop-size}) {
+    @content;
+  }
+}

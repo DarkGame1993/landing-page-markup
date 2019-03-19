@@ -1,9 +1,15 @@
 // Colors
 $white: #ffffff;
-$black: #000000;
+$black: #202020;
+
+$green: #F7F7F7;
+$light-green:#B2B2B2;
+$middle-green: #4F4F4F;
+$dark-green: #C2C2C2;
+$blue: #00C8FF;
 
 // Sizes
-$base-font-size: 16px;
+$base-font-size: 10px;
 
 $breakpoints: (
   "phone"       : 400px,
@@ -16,6 +22,11 @@ $breakpoints: (
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$content-size: 119.8rem;
 
-// Fonts
+// breakpoints
+$mobile-size: 470px;
+$large-mobile-size: 520px;
+$tablet-size: 768px;
+$tablet-wide-size: 1024px;
+$desktop-size: 1198px;

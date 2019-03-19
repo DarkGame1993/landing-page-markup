@@ -2,44 +2,55 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title><!--[if IE]>
+    <title>Main page</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <!--font-face-->
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
   <body class="index-page">
     <div class="wrapper">
-      <header class="header">
-        <div class="header__logotype"><a href=""> <img src="" alt=""></a></div>
-        <div class="header__menu">
-          <ul>
-            <li><a href="">Services</a></li>
-            <li><a href="">Clients</a></li>
-            <li><a href="">Our team</a></li>
-          </ul>
-        </div>
-      </header>
+      <div class="container">
+        <header class="header">
+          <div class="container">
+            <div class="header__logotype"><a class="header__logotype-link" href="#"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotip"></a></div>
+            <nav>
+              <ul class="menu__list">
+                <li class="menu__list-item"><a href="#">Services</a></li>
+                <li class="menu__list-item"><a href="#">Clients</a></li>
+                <li class="menu__list-item"><a href="#">Our team</a></li>
+                <li class="menu__list-item"><a href="#">Contact us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
       <div class="content">
-        <!--about-us-->
-        <section class="aboutUs">
-          <article class="aboutUs__content">
-            <div class="aboutUs__content-title">
-              <h1>We're an international development agency.</h1>
+        <div class="container">
+          <!--about-us-->
+          <section class="aboutUs">
+            <div class="aboutUs__content">
+              <div class="aboutUs__content-title">
+                <h1>We're an international development agency.</h1>
+              </div>
+              <div class="aboutUs__content-desc">
+                <p>We understand the intricacies of web development inside-out. That's why we build rock-solid Mobile and Web applications enriched with user-centered visual experiences.</p>
+              </div>
+              <div class="aboutUs__content-link"><a href="#">Contact Us</a></div>
             </div>
-            <div class="aboutUs__content-desc">
-              <p>We understand the intricacies of web development inside-out. That's why we build rock-solid Mobile and Web applications enriched with user-centered visual experiences.</p>
-            </div>
-            <div class="aboutUs__content-link"><a href="">Contact Us</a></div>
-          </article>
-        </section>
+          </section>
+        </div>
         <!--our-services-->
         <section class="ourServices">
           <div class="container">
-            <div class="ourServices__category">
-              <div class="ourServices__category-image"><img src="" alt=""></div>
+            <div class="ourServices__title">
+              <h3>Our clients</h3>
+            </div>
+            <div class="ourServices__category"><a class="absolute-link" href="#"></a>
+              <div class="ourServices__category-image"><img class="svg" src="static/images/content/services/smartphone.svg" alt="category"></div>
               <div class="ourServices__category-content">
                 <div class="ourServices__category-content--title">
                   <h4>Mobile Development</h4>
@@ -49,8 +60,8 @@
                 </div>
               </div>
             </div>
-            <div class="ourServices__category">
-              <div class="ourServices__category-image"><img src="" alt=""></div>
+            <div class="ourServices__category"><a class="absolute-link" href="#"></a>
+              <div class="ourServices__category-image"><img class="svg" src="static/images/content/services/monitor.svg" alt="category"></div>
               <div class="ourServices__category-content">
                 <div class="ourServices__category-content--title">
                   <h4>Web Development</h4>
@@ -60,8 +71,8 @@
                 </div>
               </div>
             </div>
-            <div class="ourServices__category">
-              <div class="ourServices__category-image"><img src="" alt=""></div>
+            <div class="ourServices__category"><a class="absolute-link" href="#"></a>
+              <div class="ourServices__category-image"><img class="svg" src="static/images/content/services/layers.svg" alt="category"></div>
               <div class="ourServices__category-content">
                 <div class="ourServices__category-content--title">
                   <h4>Product Design</h4>
@@ -71,8 +82,8 @@
                 </div>
               </div>
             </div>
-            <div class="ourServices__category">
-              <div class="ourServices__category-image"><img src="" alt=""></div>
+            <div class="ourServices__category"><a class="absolute-link" href="#"></a>
+              <div class="ourServices__category-image"><img class="svg" src="static/images/content/services/test.svg" alt="category"></div>
               <div class="ourServices__category-content">
                 <div class="ourServices__category-content--title">
                   <h4>Quality Assurance</h4>
@@ -87,19 +98,33 @@
         <!--our-clients-->
         <section class="ourClients">
           <div class="container">
+            <div class="ourClients__title">
+              <h3>Our clients</h3>
+            </div>
             <ul class="ourClients__list">
-              <li class="ourClients__list-item"><img src="Link" alt="Client"></li>
-              <li class="ourClients__list-item"><img src="Link" alt="Client"></li>
-              <li class="ourClients__list-item"><img src="Link" alt="Client"></li>
-              <li class="ourClients__list-item"><img src="Link" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-lightspeed.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-trvl.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-spider-strategies.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-tripadvisor.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-shutterfly.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-decos.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-tiqets.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-hotelchamp.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-flitsmeister.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-sap.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-redkix.svg" alt="Client"></li>
+              <li class="ourClients__list-item"><img class="svg" src="static/images/content/clients/logo-nos.svg" alt="Client"></li>
             </ul>
           </div>
         </section>
         <!--our-team-->
         <section class="ourTeam">
           <div class="container">
+            <div class="ourTeam__title">
+              <h3>Our team</h3>
+            </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Nina.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
                   <p>Nina</p>
@@ -110,90 +135,90 @@
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Tizzy.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Tizzy</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Front-end Developer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Tom.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Tom</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>QA Automation</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Alex.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Alex</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Front-end Developer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Thomas.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Thomas</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Mobile Developer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Claire.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Claire</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Back-end Developer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Stiven.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Stiven</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Back-end Developer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Anna-Marie.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Anna-Marie</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Product Designer</p>
                 </div>
               </div>
             </div>
             <div class="profile">
-              <div class="profile__photo"><img src="" alt=""></div>
+              <div class="profile__photo"><img src="static/images/content/team/Ernst.png" alt="Profile"></div>
               <div class="profile__information">
                 <div class="profile__information-title">
-                  <p>Nina</p>
+                  <p>Ernst</p>
                 </div>
                 <div class="profile__information-desc">
-                  <p>Team Manager</p>
+                  <p>Back-end Developer</p>
                 </div>
               </div>
             </div>
@@ -201,14 +226,16 @@
         </section>
       </div>
       <footer class="footer">
-        <div class="footer__logotip"><a class="footer__logotip-link"> <img src=""></a></div>
-        <div class="footer__social">
-          <ul class="footer__social-list">
-            <li class="footer__social-item"><a href=""></a></li>
-            <li class="footer__social-item"><a href=""></a></li>
-            <li class="footer__social-item"><a href=""></a></li>
-            <li class="footer__social-item"><a href=""></a></li>
-          </ul>
+        <div class="container">
+          <div class="footer__logotype"><a class="footer__logotype-link"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotype"></a></div>
+          <div class="footer__social">
+            <ul class="list">
+              <li class="list__item"><a class="list__item-link" href="#"><img class="svg" src="static/images/content/social/git.svg" alt="git"></a></li>
+              <li class="list__item"><a class="list__item-link" href="#"><img class="svg" src="static/images/content/social/be.svg" alt="be"></a></li>
+              <li class="list__item"><a class="list__item-link" href="#"><img class="svg" src="static/images/content/social/in.svg" alt="in"></a></li>
+              <li class="list__item"><a class="list__item-link" href="#"><img class="svg" src="static/images/content/social/code.svg" alt="code"></a></li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

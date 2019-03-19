@@ -1,11 +1,12 @@
 extends template/main
 
 block variables
-	- var title = 'Главная страница'
+	- var title = 'Main page'
 	- var pageClass = 'index-page'
 
 block content
-	include pages/main/abaut-us
+	.container
+		include pages/main/abaut-us
 	include pages/main/our-services
 	include pages/main/our-clients
 	include pages/main/our-team

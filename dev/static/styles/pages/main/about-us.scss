@@ -1,0 +1,99 @@
+// about-us
+.aboutUs{ 
+  padding-top: 13.5rem;
+  padding-bottom: 9.6rem;
+  @include max-768 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  &__content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    @include max-1198 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &-title{
+      margin-bottom: 3.5rem;
+      @include max-768 {
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-size: 5.8rem;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $black;
+        font-weight: normal;
+        text-align: center;
+        @include max-768 {
+          font-size: 2.8rem;
+        }
+      }
+    }
+    &-desc{
+      margin-bottom: 13.5rem;
+      @include max-768 {
+        margin-bottom: 2rem;
+      }
+      p {
+        text-align: left;
+        font-size: 3.2rem;
+        line-height: 5.7rem;
+        color: $middle-green;  
+        @include max-768 {
+          font-size: 1.8rem;
+          line-height: 2rem;
+        }
+      }
+    }
+    &-link{
+      text-align: left;
+      @include max-768 {
+        margin: 0 auto;
+      }
+      a{
+        overflow: hidden;
+        display: flex;
+        width: 23.5rem;
+        height: 6rem;
+        align-items: center;
+        justify-content: center;
+        background: #00C8FF;
+        border-radius: 1rem;
+        color: $white;
+        font-size: 2.8rem;
+        line-height: normal;
+        text-align: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @include max-768 {
+          font-size: 1.6rem;
+          width: 13.5rem;
+          height: 3rem;
+        }
+        @include min-768{
+          background: linear-gradient(135deg, #36424D 50%, #1FBBE1 50%);
+          -webkit-background-clip: text;
+          position: relative;
+          &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(45deg, rgba(0,200,225,1) 50%, rgba(54,66,77,1) 50%, rgba(54,66,77,1) 0%, rgba(30,200,225,1) 100%);
+            z-index: -1;
+            background-size: 300%;
+            background-position: left;
+            transition: 1s;
+          }
+          &:hover,
+          &:hover:after{
+            background-position: right;
+          }
+        }
+      }
+    }
+  }
+}

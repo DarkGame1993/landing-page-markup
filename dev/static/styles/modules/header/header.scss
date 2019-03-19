@@ -1,0 +1,96 @@
+// header
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  z-index: 10;
+  .container{
+    height: 10.3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: row wrap;
+    align-items: flex-end
+  }
+  &__logotype{
+    &-link {
+      cursor: pointer;
+      position: relative; 
+      display: block; 
+      .svg{
+        height: 4.2rem;
+      }
+      @include min-768 {
+        &:hover .svg path{
+          fill: $black;
+          opacity: .7;
+          transition: .5s;
+        }
+      }
+    }
+  }
+  .menu__list{
+    display: flex;
+    flex-flow: row wrap;
+    &-item{
+      margin-right: 4.1rem;
+      color: $black;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      a{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: normal;
+        @include min-768{
+          &:hover{
+            text-decoration: underline $blue;
+          }
+        }
+      }
+      &:last-child a{
+        overflow: hidden;
+        display: flex;
+        width: 10rem;
+        height: 2.4rem;
+        color: $white!important;
+        align-items: center;
+        justify-content: center;
+        background: $blue;
+        border-radius: 1rem;
+        color: $white;
+        line-height: normal;
+        text-align: center;
+        @include max-768 {
+          font-size: 1.6rem;
+          width: 10rem;
+          height: 2.4rem;
+        }
+        @include min-768{
+          background: linear-gradient(135deg, #36424D 50%, #1FBBE1 50%);
+          -webkit-background-clip: text;
+          position: relative;
+          &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(45deg, rgba(0,200,225,1) 50%, rgba(54,66,77,1) 50%, rgba(54,66,77,1) 0%, rgba(30,200,225,1) 100%);
+            z-index: -1;
+            background-size: 300%;
+            background-position: left;
+            transition: 1s;
+          }
+          &:hover,
+          &:hover:after{
+            background-position: right;
+          }
+        }
+      }
+    }
+  }
+}

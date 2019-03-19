@@ -1,1 +1,70 @@
 footer { flex: 0 0 auto; }
+// footer
+.footer{
+  background-color: $green;
+  //height: 10rem;
+  @include max-470{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .container{
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    @include max-470{
+      flex-flow: column nowrap;
+      height: 9rem;
+    }
+    @include max-1198{
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  &__logotype{
+    &-link {
+      cursor: pointer;
+      position: relative; 
+      display: block; 
+      .svg{
+        height: 4.2rem;
+      }
+      @include min-768 {
+        &:hover .svg path{
+          fill: $black;
+          opacity: .7;
+          transition: .5s;
+        }
+      }
+    }
+  }
+  &__social{
+    .list{
+      display: flex;
+      flex-flow: row nowrap;
+      &__item{
+        margin-right: 4rem;
+        &:last-of-type{
+          margin-right: 0;
+        }
+        &-link{
+          cursor: pointer;
+          line-height: 2.4rem;
+          .svg{
+            height: 2.4rem;
+            object-fit: scale-down;
+            background-size: cover;
+            overflow: hidden;
+            max-width: 2.4rem;
+          }
+          @include min-768 {
+            &:hover .svg path{
+              fill: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

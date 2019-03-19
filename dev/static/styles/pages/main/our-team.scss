@@ -1,0 +1,89 @@
+// our-team
+.ourTeam {
+  position: relative;
+  border-top: 1px solid $dark-green;
+  &__title {
+    position: absolute;
+    top: -1.4rem;
+    left: -1.6rem;
+    @include max-1198{
+      left: 1rem;
+    }
+    h3{
+      background: white;
+      padding-right: 5.6rem;
+      padding-left: 1.6rem;
+      font-size: 2rem;
+      line-height: normal;
+      font-weight: normal;
+      color: $dark-green;
+      text-transform: uppercase;
+      letter-spacing: normal
+    }
+  }
+  .container{
+    position: relative;
+    display: flex;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include max-1198 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @include max-520 {
+      flex-flow: column wrap;
+    }
+    @include max-768 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    & > .profile {
+      align-self: stretch;
+      flex-basis: 33.3%;
+      flex-grow: 1;
+      align-items: center;
+      flex-shrink: 2;
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      @include max-768 {
+        flex-basis: 50%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      @include max-470 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .profile {
+        &__photo{
+          margin-right: 3.5rem;
+          img{
+            height: 10rem;  
+            width: 10rem;
+            object-fit: cover;
+          }
+        }
+        &__information{
+          &-title{
+            margin-bottom: 0.8rem;
+            p{
+              font-size: 2.8rem;
+              line-height: normal;
+              color: $black;
+            }
+          }
+          &-desc{
+            p{
+              font-size: 1.4rem;
+              line-height: normal;
+              color: $light-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
