@@ -14,15 +14,21 @@
     height: 10.3rem;
     display: flex;
     justify-content: space-between;
-    flex-grow: row wrap;
+    flex-flow: row wrap;
     align-items: flex-end;
   }
   @include max-768{
     .container{
-      flex-grow: column wrap;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: center;
+      height: 7.3rem;
     }
   }
   &__logotype{
+    @include min-1198{
+      margin-left: -1rem;
+    }
     &-link {
       cursor: pointer;
       position: relative; 
@@ -37,6 +43,12 @@
           transition: .5s;
         }
       }
+    }
+  }
+  @include min-768{
+    .burger,
+    .burger-check {
+      display: none;
     }
   }
   @include max-768{
@@ -109,21 +121,43 @@
     nav {
       overflow: hidden;
       max-height: 0;
+      position: absolute;
+      top: 7rem;
+      left: 0;
       transition: max-height 0.5s ease-in-out;
+      @include max-768{
+        display: flex;
+        width: 100%;
+        flex-flow: wrap row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
     }
     
     .burger-check:checked ~ nav {
       overflow: inherit;
-      max-height: 500px;
+      max-height: 30rem;
       transition: max-height 0.5s ease-in-out;
     }
   }
   .menu__list{
     display: flex;
     flex-flow: row wrap;
+    @include max-768{
+      background: $white;
+      flex-flow: column wrap;
+      width: 100%;
+      align-items: center;
+    }
     &-item{
       margin-right: 4.1rem;
       color: $black;
+      @include max-768 {
+        margin-right: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
       &:last-of-type{
         margin-right: 0;
       }
@@ -133,9 +167,12 @@
         font-size: 1.6rem;
         line-height: normal;
         color: $black;
+        text-decoration-color: $blue!important;
         @include min-768{
           &:hover{
-            text-decoration: underline $blue;
+            color: $blue;
+            text-decoration: underline;
+            text-decoration-color: $blue;
           }
         }
       }
@@ -157,8 +194,11 @@
           width: 10rem;
           height: 2.4rem;
         }
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          background: $blue!important;
+        }
         @include min-768{
-          background: linear-gradient(135deg, #36424D 50%, #1FBBE1 50%);
+          background-image: linear-gradient(135deg, #36424D 50%, #00C8FF 50%);
           -webkit-background-clip: text;
           position: relative;
           &:after{
@@ -168,7 +208,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(45deg, rgba(0,200,225,1) 50%, rgba(54,66,77,1) 50%, rgba(54,66,77,1) 0%, rgba(30,200,225,1) 100%);
+            background-image: linear-gradient(45deg, rgba(0,200,225,1) 50%, rgba(54,66,77,1) 50%, rgba(54,66,77,1) 0%, rgba(0,200,225,1) 100%);
             z-index: -1;
             background-size: 300%;
             background-position: left;
@@ -183,7 +223,9 @@
       }
     }
   }
-  .active a{
-    color: $blue;
+  @include min-768{
+    .active a{
+      color: $blue;
+    }
   }
 }

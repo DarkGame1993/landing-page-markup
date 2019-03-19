@@ -93,7 +93,8 @@
 }
 @include min-768{
   .ourServices__category:hover .ourServices__category-content--title h4{
-    text-decoration: underline $blue;
+    text-decoration: underline;
+    color: $blue;
   }
   .ourServices__category:hover .ourServices__category-content--desc p{
     color: $blue;

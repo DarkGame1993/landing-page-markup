@@ -34,7 +34,7 @@ $(document).ready(function () {
         }, 'xml');
     });
     // link to section
-    function scrollNav() {
+    function scrollToSection() {
         jQuery('.menu__list a').click(function(){  
           //Toggle Class
           jQuery(".active").removeClass("active");      
@@ -49,5 +49,5 @@ $(document).ready(function () {
         });
         $('.scrollTop a').scrollTop();
       }
-      scrollNav();
+      scrollToSection();
 });

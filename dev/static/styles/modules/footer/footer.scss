@@ -23,6 +23,9 @@ footer { flex: 0 0 auto; }
     }
   }
   &__logotype{
+    @include min-1198{
+      margin-left: -1rem;
+    }
     &-link {
       cursor: pointer;
       position: relative; 
