@@ -1,16 +1,19 @@
 //- header
 header.header
   .container
-    .header__logotype
+    .header__logotype.scrollTop
       a.header__logotype-link(href="#") 
         img.svg(src="static/images/general/logotype.svg", alt="Logotip")
+    
+    input(id="burger" class="burger-check" type="checkbox")
+    label(for="burger" class="burger")
     nav
       ul.menu__list
         li.menu__list-item
-          a(href="#") Services
+          a(href="#services") Services
         li.menu__list-item
-          a(href="#") Clients
+          a(href="#clients") Clients
         li.menu__list-item
-          a(href="#") Our team
+          a(href="#team") Our team
         li.menu__list-item
-          a(href="#") Contact us
+          a(href="#contact-us") Contact us

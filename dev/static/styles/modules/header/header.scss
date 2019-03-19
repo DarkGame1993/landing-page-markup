@@ -6,12 +6,21 @@
   right: 0;
   background: $white;
   z-index: 10;
+  @include max-1198{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .container{
     height: 10.3rem;
     display: flex;
     justify-content: space-between;
     flex-grow: row wrap;
-    align-items: flex-end
+    align-items: flex-end;
+  }
+  @include max-768{
+    .container{
+      flex-grow: column wrap;
+    }
   }
   &__logotype{
     &-link {
@@ -30,6 +39,85 @@
       }
     }
   }
+  @include max-768{
+    $burger--thickness: 4px;
+    .burger {
+      position: absolute;
+      right: 3rem;
+      $width: 2.8rem;
+      display: inline-block;
+      border: 0;
+      background: none;
+      outline: 0;
+      padding: 0;
+      cursor: pointer;
+      border-bottom: $burger--thickness solid currentColor;
+      width: $width;
+      transition: border-bottom 1s ease-in-out;
+      -webkit-transition: border-bottom 1s ease-in-out; 
+
+      // Fix for extra space in Firefox
+      &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }	 
+
+      &:before {
+        content: "";
+        display: block;
+        border-bottom: $burger--thickness solid currentColor;
+        width: 100%;
+        margin-bottom: 5px;
+        transition: transform 0.5s ease-in-out;    
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;        
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        border-bottom: $burger--thickness solid currentColor;
+        width: 100%;
+        margin-bottom: 5px;
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      }
+    }
+
+    .burger-check {
+      display: none;
+    }
+  
+    .burger-check:checked ~ .burger {
+      border-bottom: $burger--thickness solid transparent;
+      transition: border-bottom 0.8s ease-in-out;
+      -webkit-transition: border-bottom 0.8s ease-in-out;
+
+      &:before {
+        transform: rotate(-405deg) translateY(1px) translateX(-3px);
+        -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);      
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      }
+
+      &:after {
+        transform: rotate(405deg) translateY(-4px) translateX(-5px); 
+        -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);       
+        transition: transform 0.5s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+      }
+    }
+    nav {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-in-out;
+    }
+    
+    .burger-check:checked ~ nav {
+      overflow: inherit;
+      max-height: 500px;
+      transition: max-height 0.5s ease-in-out;
+    }
+  }
   .menu__list{
     display: flex;
     flex-flow: row wrap;
@@ -44,6 +132,7 @@
         font-weight: normal;
         font-size: 1.6rem;
         line-height: normal;
+        color: $black;
         @include min-768{
           &:hover{
             text-decoration: underline $blue;
@@ -87,10 +176,14 @@
           }
           &:hover,
           &:hover:after{
+            text-decoration: none;
             background-position: right;
           }
         }
       }
     }
+  }
+  .active a{
+    color: $blue;
   }
 }

@@ -33,4 +33,21 @@ $(document).ready(function () {
 
         }, 'xml');
     });
+    // link to section
+    function scrollNav() {
+        jQuery('.menu__list a').click(function(){  
+          //Toggle Class
+          jQuery(".active").removeClass("active");      
+          jQuery(this).closest('li').addClass("active");
+          var theClass = jQuery(this).attr("class");
+          jQuery('.'+theClass).parent('li').addClass('active');
+          //Animate
+          jQuery('html, body').stop().animate({
+              scrollTop: jQuery( jQuery(this).attr('href') ).offset().top - 160
+          }, 400);
+          return false;
+        });
+        $('.scrollTop a').scrollTop();
+      }
+      scrollNav();
 });

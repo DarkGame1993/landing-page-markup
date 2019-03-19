@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="static/images/general/favicon.ico">
     <!--font-face-->
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/css/styles.min.css"><!--[if lt IE 9]>
@@ -16,13 +17,15 @@
       <div class="container">
         <header class="header">
           <div class="container">
-            <div class="header__logotype"><a class="header__logotype-link" href="#"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotip"></a></div>
+            <div class="header__logotype scrollTop"><a class="header__logotype-link" href="#"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotip"></a></div>
+            <input class="burger-check" id="burger" type="checkbox">
+            <label class="burger" for="burger"></label>
             <nav>
               <ul class="menu__list">
-                <li class="menu__list-item"><a href="#">Services</a></li>
-                <li class="menu__list-item"><a href="#">Clients</a></li>
-                <li class="menu__list-item"><a href="#">Our team</a></li>
-                <li class="menu__list-item"><a href="#">Contact us</a></li>
+                <li class="menu__list-item"><a href="#services">Services</a></li>
+                <li class="menu__list-item"><a href="#clients">Clients</a></li>
+                <li class="menu__list-item"><a href="#team">Our team</a></li>
+                <li class="menu__list-item"><a href="#contact-us">Contact us</a></li>
               </ul>
             </nav>
           </div>
@@ -31,7 +34,7 @@
       <div class="content">
         <div class="container">
           <!--about-us-->
-          <section class="aboutUs">
+          <section class="aboutUs" id="contact-us">
             <div class="aboutUs__content">
               <div class="aboutUs__content-title">
                 <h1>We're an international development agency.</h1>
@@ -44,10 +47,10 @@
           </section>
         </div>
         <!--our-services-->
-        <section class="ourServices">
+        <section class="ourServices" id="services">
           <div class="container">
             <div class="ourServices__title">
-              <h3>Our clients</h3>
+              <h3>Our services</h3>
             </div>
             <div class="ourServices__category"><a class="absolute-link" href="#"></a>
               <div class="ourServices__category-image"><img class="svg" src="static/images/content/services/smartphone.svg" alt="category"></div>
@@ -96,7 +99,7 @@
           </div>
         </section>
         <!--our-clients-->
-        <section class="ourClients">
+        <section class="ourClients" id="clients">
           <div class="container">
             <div class="ourClients__title">
               <h3>Our clients</h3>
@@ -118,7 +121,7 @@
           </div>
         </section>
         <!--our-team-->
-        <section class="ourTeam">
+        <section class="ourTeam" id="team">
           <div class="container">
             <div class="ourTeam__title">
               <h3>Our team</h3>
@@ -227,7 +230,7 @@
       </div>
       <footer class="footer">
         <div class="container">
-          <div class="footer__logotype"><a class="footer__logotype-link"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotype"></a></div>
+          <div class="footer__logotype scrollTop"><a class="footer__logotype-link"> <img class="svg" src="static/images/general/logotype.svg" alt="Logotype"></a></div>
           <div class="footer__social">
             <ul class="list">
               <li class="list__item"><a class="list__item-link" href="#"><img class="svg" src="static/images/content/social/git.svg" alt="git"></a></li>
