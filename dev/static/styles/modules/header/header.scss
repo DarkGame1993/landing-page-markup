@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: $white;
+  background:rgba(255,255,255,0.9);
   z-index: 10;
   @include max-1198{
     padding-left: 1rem;
@@ -144,6 +144,7 @@
   .menu__list{
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 2.5px;
     @include max-768{
       background: $white;
       flex-flow: column wrap;

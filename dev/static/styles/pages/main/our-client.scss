@@ -52,13 +52,13 @@
       justify-content: center;
       .svg {
         transition: all .2s ease-in-out;
+        path {
+          fill: #B2B2B2;
+        }
       }
       @include min-768 {
         &:hover .svg path {
-          fill: $blue;
-        }
-        &:hover .svg {
-          transform: scale(1.1);
+          fill: #838997;
         }
       }
       @include max-768 {
